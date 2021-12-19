@@ -12,6 +12,7 @@
         "prettier": "^2.5.1",
         "ts-node": "3.3.0",
         "ts-node-dev": "^1.1.8",
+        "tsconfig-paths": "^3.12.0",
         "typescript": "3.3.3333"
     },
     "dependencies": {
@@ -26,7 +27,7 @@
     },
     "scripts": {
         "start": "ts-node src/index.ts",
-        "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+        "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
         "lint": "eslint . --ext .ts",
         "lint-fix": "eslint . --ext .ts --fix"
     }
